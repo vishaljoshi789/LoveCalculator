@@ -3,6 +3,7 @@ name2 = document.getElementsByName("name2")[0];
 loveCata = ["Romantic", "Innocent", "Loyal", "Possessive", "Unconditional", "Mutual Respect", "Selfless", "Pure", "Trust", "Emotional"]
 
 calculateLove = function() {
+    document.querySelector('.love-cata').innerHTML = ``
     n1 = name1.value.toLowerCase();
     n2 = name2.value.toLowerCase();
     randomno = Math.floor(Math.random() * 49)
@@ -42,7 +43,7 @@ calculateLove = function() {
 
         }
         loveper = tens*10+ones
-        lovecata_index = ones>=3 ? [ones, ones-1, ones-2, ones-3] : [ones, ones+1, ones+2, ones+3]
+        lovecata_index = ones>=4 ? [ones, ones-1, ones-2, ones-3, ones-4] : [ones, ones+1, ones+2, ones+3, ones+4]
         lovecata_index.forEach((i)=> document.querySelector('.love-cata').innerHTML += `<li>${loveCata[i]}</li>`)
         document.querySelector('.my-chart').innerHTML = '<canvas id="loveper"></canvas>'
         const lovechart = document.getElementById('loveper').getContext('2d');
