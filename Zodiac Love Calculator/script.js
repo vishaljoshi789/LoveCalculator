@@ -63,32 +63,10 @@ calculateLove = function() {
             maintainAspectRatio: false
             },
         })
-        document.querySelector('.userinfo').innerHTML = ``
-        document.querySelector('#recheckper').style.display = 'block'
         document.querySelector('.love-percentage').innerHTML = `Love Percentage = ${loveper}%` 
         lovecata_index.forEach((i)=> document.querySelector('.love-cata').innerHTML += `<li>${loveCata[i]}</li>`)
         fetch('https://g.tenor.com/v1/search?q=loveyou&key=LFKOLDCGEUVU&limit=50').then(response => response.json()).then(data => {document.querySelector('#gif').innerHTML = `<img src="${data.results[randomno].media[0].gif.url}" alt="">`})
-        document.querySelector('.share').innerHTML = `<a href="https://web.whatsapp.com/send?text=Love%20Percentage%20of%20${name1.value}%20and%20${name2.value}%20is%20${loveper}%20https://cambiardeletra.com/" target='_blank'>Whatsapp</a>`
 
     }
 
 }
-
-
-document.querySelector('#recheckper').addEventListener('click', ()=>{
-    document.querySelector('.userinfo').innerHTML = `<form action="#" method="get"  onsubmit="return false" >
-    <div>
-    <label for="name1">Name 1:</label>
-    <input type="text" name="name1" id="name1"></div>
-    <div>
-    <label for="name2">Name 2:</label>
-    <input type="text" name="name2" id="name2"></div>
-    <button type="submit" onclick="calculateLove()">Calculate</button>
-</form>`
-document.querySelector('.love-cata').innerHTML = ``
-document.querySelector('.love-percentage').innerHTML = ``
-document.querySelector('.my-chart').innerHTML = ``
-document.querySelector('#gif').innerHTML = ``
-document.querySelector('.share').innerHTML = ``
-document.querySelector('#recheckper').style.display = 'none'
-})

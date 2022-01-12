@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <title>Love Calculator</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>   
+    
+    <main>
+        <h1>Love Calculator</h1>
+        <div class="userinfo">
+        <form action="#" method="get"  onsubmit="return false" >
+            <div class="name1">
+            <label for="name1">Name 1:</label>
+            <input type="text" name="name1" id="name1">
+            <div>
+            <label for="zodiac1">Zodiac:</label>
+            <select name="zodiac1" id="zodiac1">
+                <option value="Aries">♈︎ Aries &nbsp;&nbsp;&nbsp;&nbsp; Mar. 21–Apr. 19</option>
+                <option value="Taurus">♉︎ Taurus &nbsp;&nbsp;&nbsp;&nbsp; Apr. 20–May 20</option>
+                <option value="Gemini">♊︎ Gemini &nbsp;&nbsp;&nbsp;&nbsp; May 21–June 21</option>
+                <option value="Cancer">♋︎ Cancer &nbsp;&nbsp;&nbsp;&nbsp; June 22–July 22</option>
+                <option value="Leo">♌︎ Leo &nbsp;&nbsp;&nbsp;&nbsp; July 23–Aug. 22</option>
+                <option value="Virgo">♍︎ Virgo &nbsp;&nbsp;&nbsp;&nbsp; Aug. 23–Sept. 22</option>
+                <option value="Libra">♎︎ Libra &nbsp;&nbsp;&nbsp;&nbsp; Sept. 23–Oct. 23</option>
+                <option value="Scorpio">♏︎ Scorpio &nbsp;&nbsp;&nbsp;&nbsp; Oct. 24–Nov. 21</option>
+                <option value="Sagittarius">♐︎ Sagittarius &nbsp;&nbsp;&nbsp;&nbsp; Nov. 22–Dec. 21</option>
+                <option value="Capricornus">♑︎ Capricornus &nbsp;&nbsp;&nbsp;&nbsp; Dec. 22–Jan. 19</option>
+                <option value="Aquarius">♒︎ Aquarius &nbsp;&nbsp;&nbsp;&nbsp; Jan. 20–Feb. 18</option>
+                <option value="Pisces">♓︎ Pisces &nbsp;&nbsp;&nbsp;&nbsp; Feb. 19–Mar. 20</option>
+            </select></div></div>
+            <div class="name2">
+            <label for="name2">Name 2:</label>
+            <input type="text" name="name2" id="name2">
+            <div>
+            <label for="zodiac2">Zodiac:</label>
+            <select name="zodiac2" id="zodiac2">
+                <option value="Aries">♈︎ Aries &nbsp;&nbsp;&nbsp;&nbsp; Mar. 21–Apr. 19</option>
+                <option value="Taurus">♉︎ Taurus &nbsp;&nbsp;&nbsp;&nbsp; Apr. 20–May 20</option>
+                <option value="Gemini">♊︎ Gemini &nbsp;&nbsp;&nbsp;&nbsp; May 21–June 21</option>
+                <option value="Cancer">♋︎ Cancer &nbsp;&nbsp;&nbsp;&nbsp; June 22–July 22</option>
+                <option value="Leo">♌︎ Leo &nbsp;&nbsp;&nbsp;&nbsp; July 23–Aug. 22</option>
+                <option value="Virgo">♍︎ Virgo &nbsp;&nbsp;&nbsp;&nbsp; Aug. 23–Sept. 22</option>
+                <option value="Libra">♎︎ Libra &nbsp;&nbsp;&nbsp;&nbsp; Sept. 23–Oct. 23</option>
+                <option value="Scorpio">♏︎ Scorpio &nbsp;&nbsp;&nbsp;&nbsp; Oct. 24–Nov. 21</option>
+                <option value="Sagittarius">♐︎ Sagittarius &nbsp;&nbsp;&nbsp;&nbsp; Nov. 22–Dec. 21</option>
+                <option value="Capricornus">♑︎ Capricornus &nbsp;&nbsp;&nbsp;&nbsp; Dec. 22–Jan. 19</option>
+                <option value="Aquarius">♒︎ Aquarius &nbsp;&nbsp;&nbsp;&nbsp; Jan. 20–Feb. 18</option>
+                <option value="Pisces">♓︎ Pisces &nbsp;&nbsp;&nbsp;&nbsp; Feb. 19–Mar. 20</option>
+            </select></div></div>
+        </form>
+        <button type="submit" onclick="calculateLove()" class="calbtn">Calculate</button>
+    </div>
+        <div id="result">
+            <p class="love-percentage"></p>
+        <div class="my-chart"></div>
+
+        </div>
+        <div id="gif"></div>
+
+        <div class="love-cata"></div>
+
+
+
+        
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
     <title>Love Calculator</title>
 </head>
 <body>
@@ -21,7 +20,8 @@
     
     <main>
         <h1>Love Calculator</h1>
-        <form action="#" method="get"  onsubmit="return false" >
+        <div class="userinfo">
+        <form onsubmit="return false" >
             <div>
             <label for="name1">Name 1:</label>
             <input type="text" name="name1" id="name1"></div>
@@ -30,7 +30,8 @@
             <input type="text" name="name2" id="name2"></div>
             <button type="submit" onclick="calculateLove()">Calculate</button>
         </form>
-
+    </div>
+    <button id='recheckper'>Recalculate</button>
         <div id="result">
             <p class="love-percentage"></p>
         <div class="my-chart"></div>
@@ -39,12 +40,9 @@
         <div id="gif"></div>
 
         <div class="love-cata"></div>
-
-
-
-        
-
+        <div class="share"></div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
