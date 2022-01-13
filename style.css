@@ -29,8 +29,6 @@ nav ul{
     width: 50%;
 }
 
-
-
 nav ul li a{
     color: rgb(0, 0, 0);
     text-decoration: none;
@@ -42,11 +40,6 @@ nav ul li a{
 nav ul li a:hover{
     background-color: #FF2C64;
     color: white;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
 }
 
 .background{
@@ -69,15 +62,13 @@ main{
     justify-content: space-evenly;
     align-items: center;
     border-radius: 5px;
-    position: absolute;
-    top: 50%;
     transform: translatey(-50%);
     width: 100%;
 }
 
 .tag-line{
     text-align: left;
-    margin: 100px 20px;
+    margin: 100px 20px 250px 20px;
     font-size: 25px;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -174,6 +165,8 @@ form label{
 }
 
 #recheckper button:hover{
+    color: white;
+    background: #FF2C64;
     box-shadow: 5px 5px 10px #00000062;
     cursor: pointer;
 }
@@ -211,7 +204,10 @@ form label{
 .love-cata li{
     font-weight: 500;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 20px;
+    padding: 20px;
+    margin: 1px;
+    background: white;
+    color: #FF2C64;
 }
 
 .loveInfotext{
@@ -246,6 +242,56 @@ form label{
 
 
 
+.zodiac-calculator{
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+}
 
+.zodiac-calculator a{
+    border-radius: 5px;
+    border: none;
+    background: #FF2C64;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 10px 10px 10px #00000062;
+}
 
+.zodiac-calculator a:hover{
+    color: #FF2C64;
+    box-shadow: 5px 5px 10px #00000062;
+    background: white;
+    cursor: pointer;
+}
 
+@media screen and (max-width: 600px) {
+    nav{
+        flex-direction: column;
+    }
+
+    .tag-line{
+        margin: 50px 20px 100px 20px;
+    }
+
+    nav ul{
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .user-info {
+        padding: 5px;
+    }
+
+    .user-info form input{
+        width: 50%;
+        margin: 5px;
+    }
+
+    .user-info form label{
+        margin: 2px;
+    }
+}
