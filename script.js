@@ -68,7 +68,7 @@ calculateLove = function() {
         document.querySelector('.love-percentage').innerHTML = `Love Percentage = ${loveper}%` 
         lovecata_index.forEach((i)=> document.querySelector('.love-cata').innerHTML += `<li>${loveCata[i]}</li>`)
         fetch('https://g.tenor.com/v1/search?q=loveyou&key=LFKOLDCGEUVU&limit=50').then(response => response.json()).then(data => {document.querySelector('#gif').innerHTML = `<img src="${data.results[randomno].media[0].gif.url}" alt="">`})
-        document.querySelector('.share').innerHTML = `<a href="https://web.whatsapp.com/send?text=Love%20Percentage%20of%20${name1.value}%20and%20${name2.value}%20is%20${loveper}%20https://cambiardeletra.com/" target='_blank'>Whatsapp</a>`
+        document.querySelector('.share').innerHTML = `<a href="https://wa.me/?text=Love%20Percentage%20of%20${name1.value}%20and%20${name2.value}%20is%20${loveper}%20https://cambiardeletra.com/" target='_blank'>Whatsapp</a>`
 
     }
 
