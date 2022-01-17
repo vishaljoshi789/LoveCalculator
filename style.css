@@ -267,6 +267,95 @@ form label{
     background: white;
     cursor: pointer;
 }
+.accordion {
+    background:#FF2C64;
+    margin: 1px 0;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+  
+.active, .accordion:hover {
+    background-color: white;
+    color: #FF2C64;
+}
+  
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.FAQS-heading{
+    margin: 10px auto;
+    font-size: x-large;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.copy{
+    display: flex;
+    justify-content: space-evenly;
+    background: #FF2C64;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.copy a{
+    text-decoration: none;
+    color: white;
+}
+.FAQs{
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.famous-love-results{
+    background: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.famous-love-results h3{
+    background: white;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+}
+
+.famous-love-results table{
+    color:white;
+    width: 100%;
+}
+
+.famous-love-results table tr th{
+    background: #FF2C64;
+    padding: 20px;
+}
+
+
 
 @media screen and (max-width: 600px) {
     nav{

@@ -1,8 +1,8 @@
-name1 = document.getElementsByName("name1")[0];
-name2 = document.getElementsByName("name2")[0];
 loveCata = ["Romantic", "Innocent", "Loyal", "Possessive", "Unconditional", "Mutual Respect", "Selfless", "Pure", "Trust", "Emotional"]
 
 calculateLove = function() {
+    name1 = document.getElementsByName("name1")[0];
+    name2 = document.getElementsByName("name2")[0];
     document.querySelector('.love-cata').innerHTML = ``
     n1 = name1.value.toLowerCase();
     n2 = name2.value.toLowerCase();
@@ -29,19 +29,32 @@ calculateLove = function() {
                 ones+=n2.match(i).length;
             }
         })
-        if(tens<2){
+        console.log(tens)
+        if(tens<1){
             tens+=8
         }
+        else if(tens<2){
+            tens += 8
+        }
         else if(tens<3){
-            tens = 8
+            tens += 8
+        }
+        else if(tens<4){
+            tens += 5
         }
         else if(tens<5){
-            tens = 4
+            tens += 4
+        }
+        else if(tens<6){
+            tens += 3
+        }
+        else if(tens<7){
+            tens += 1
         }
         else if(tens>=10){
             tens -= 1
-
         }
+        console.log(tens)
         loveper = tens*10+ones
         lovecata_index = ones>=4 ? [ones, ones-1, ones-2, ones-3, ones-4] : [ones, ones+1, ones+2, ones+3, ones+4]
         if(loveper<100 && loveper>=91){lover_info = `You have the best love equation with ${name2.value} and you seems to have a perfect partner. `}
@@ -112,4 +125,19 @@ document.querySelector('.loveInfotext').innerHTML = ``
 document.querySelector('.loveInfotext').style.display = `none`
 document.querySelector('.tag-line').style.display = `block`
 document.querySelector('.user-info').style.display = `block`
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
 }
